@@ -1,0 +1,1 @@
+console.log('hero.js loaded');
