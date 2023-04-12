@@ -1,0 +1,7 @@
+$page-container-max-width: 2000px;
+
+.page-container {
+    max-width: $page-container-max-width;
+    margin: 0 auto;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
