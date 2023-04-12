@@ -1,0 +1,43 @@
+.hero {
+    margin-bottom: 1em;
+    user-select: none;
+
+    $unsplash-id: "yktK2qaiVHI";
+    background-image: url("https://source.unsplash.com/#{$unsplash-id}/1600x800");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: background-image 0.2s ease-in-out;
+
+    .grid-x {
+        height: calc(min(50vh, 40vw));
+        max-height: $page-container-max-width / 2.5;
+    }
+
+    .hero-content {
+        font-size: 3em;
+        color: #fff;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+
+        @include breakpoint(small down) {
+            font-size: 1.6em;
+        }
+    }
+
+    animation: breathe 50s forwards infinite;
+}
+
+@keyframes breathe {
+    0% {
+        background-size: 100% auto;
+    }
+
+    50% {
+        background-size: 110% auto;
+    }
+
+    100% {
+        background-size: 100% auto;
+    }
+}
